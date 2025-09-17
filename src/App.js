@@ -15,14 +15,14 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import OrderSuccess from './pages/OrderSuccess'; // ✅ new page
+import OrderSuccess from './pages/OrderSuccess';
 
 // Context
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
 
 // Mock data
-import { mockFoods } from './data/mockData';
+import { mockFoods } from './data/mockData'; // ✅ make sure this file exists
 
 // Replace with your actual Google Client ID
 const GOOGLE_CLIENT_ID = "738932656940-eof0q6nl75vuh2r71u6hn6djp57nfk58.apps.googleusercontent.com";
@@ -43,7 +43,7 @@ function App() {
                   <Route path="/checkout" element={<Checkout />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
-                  <Route path="/order-success" element={<OrderSuccess />} /> {/* ✅ Added */}
+                  <Route path="/order-success" element={<OrderSuccess />} />
                 </Routes>
               </main>
               <Footer />
