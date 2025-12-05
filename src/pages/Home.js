@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Truck, Shield, Heart } from 'lucide-react';
+import { ChevronRight, Truck, Shield, Heart, Star } from 'lucide-react';
 import FoodCard from '../components/FoodCard';
 import './Home.css';
 
@@ -17,11 +17,14 @@ const Home = ({ foods }) => {
               <Link to="/menu" className="btn btn-primary">
                 Order Now <ChevronRight size={20} />
               </Link>
+              <Link to="/about" className="btn btn-secondary">
+                Learn More
+              </Link>
             </div>
           </div>
           <div className="hero-image">
             <div className="image-placeholder">
-              <img src="https://healthybuddha.in/image/catalog/Recentblogs/blogs/fresh-vegetables-food.jpg" alt="Fresh organic food" />
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JnYW5pYyUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="Fresh organic food" />
             </div>
           </div>
         </div>
@@ -70,6 +73,57 @@ const Home = ({ foods }) => {
             <Link to="/menu" className="btn btn-primary">
               View Full Menu <ChevronRight size={20} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="testimonials">
+        <div className="container">
+          <h2 className="section-title">What Our Customers Say</h2>
+          <div className="testimonials-grid">
+            <div className="testimonial">
+              <div className="testimonial-content">
+                <div className="stars">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} size={16} fill="gold" />
+                  ))}
+                </div>
+                <p>"The quality of their organic vegetables is unmatched. I've been a customer for over a year now!"</p>
+                <div className="testimonial-author">
+                  <strong>Sarah Johnson</strong>
+                  <span>Regular Customer</span>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial">
+              <div className="testimonial-content">
+                <div className="stars">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} size={16} fill="gold" />
+                  ))}
+                </div>
+                <p>"Their delivery is always on time and the food is always fresh. Highly recommend!"</p>
+                <div className="testimonial-author">
+                  <strong>Michael Chen</strong>
+                  <span>Food Enthusiast</span>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial">
+              <div className="testimonial-content">
+                <div className="stars">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} size={16} fill="gold" />
+                  ))}
+                </div>
+                <p>"As a nutritionist, I only recommend the best to my clients. This is my go-to for organic produce."</p>
+                <div className="testimonial-author">
+                  <strong>Dr. Emily Rodriguez</strong>
+                  <span>Nutrition Specialist</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
